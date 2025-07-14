@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim | GOLD METAL - Premium Altın Eleme Ekipmanları</title>
+    <meta name="description" content="GOLD METAL ile iletişime geçin. Premium altın eleme ekipmanları için uzman desteği alın. WhatsApp, Telegram ve TikTok üzerinden bize ulaşın.">
+    <meta name="keywords" content="altın eleme ekipmanları, gold metal, iletişim, whatsapp, telegram, tiktok">
     <link rel="icon" href="https://64.media.tumblr.com/c8a2f0b83b63adef6f4bd0ba29de5180/30b24c22617e32d9-04/s1280x1920/5d1e541cc557a65e52c96910aba89ae3f5ba2a84.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,8 +16,6 @@
             --dark: #1a2a0f;
             --light: #f8f8f0;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            --admin-blue: #1a3a6c;
-            --admin-light: #f0f5ff;
         }
         
         * {
@@ -187,7 +187,7 @@
             border-top: 4px solid var(--gold);
         }
         
-        .contact-form {
+        .direct-contact {
             flex: 2;
             min-width: 300px;
             background: white;
@@ -277,60 +277,131 @@
             text-align: center;
         }
         
-        .form-group {
-            margin-bottom: 20px;
+        .business-hours {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
         }
         
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
+        .day {
             font-weight: 600;
             color: var(--dark);
         }
         
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: all 0.3s;
+        .hours {
+            text-align: right;
+            color: #555;
         }
         
-        .form-group input:focus,
-        .form-group textarea:focus {
+        /* Direct Contact Section */
+        .direct-contact h3 {
+            color: var(--dark-gold);
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 1.8rem;
+            position: relative;
+        }
+        
+        .direct-contact h3:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--gold), var(--dark-gold));
+            border-radius: 2px;
+        }
+        
+        .direct-contact p {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             border-color: var(--gold);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
         }
         
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
+        .contact-card:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
         }
         
-        .submit-btn {
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: var(--gold);
+        }
+        
+        .contact-card h4 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .contact-card .contact-info {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+            min-height: 60px;
+        }
+        
+        .contact-btn {
             display: inline-block;
-            padding: 14px 30px;
+            padding: 12px 25px;
             background: var(--gold);
             color: white;
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            border: none;
-            cursor: pointer;
-            width: 100%;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
         
-        .submit-btn:hover {
+        .contact-btn:hover {
             background: var(--dark-gold);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .map-container {
@@ -348,21 +419,56 @@
             border: none;
         }
         
-        .business-hours {
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--gold);
+            margin: 40px 0;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            color: var(--dark-gold);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        
+        .faq-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         
-        .day {
-            font-weight: 600;
+        .faq-item {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-item h3 {
             color: var(--dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
-        .hours {
-            text-align: right;
+        .faq-item h3 i {
+            color: var(--gold);
+        }
+        
+        .faq-item p {
             color: #555;
+            line-height: 1.6;
         }
         
         /* Footer */
@@ -442,267 +548,6 @@
             margin-top: 20px;
         }
         
-        /* Admin Panel Styles */
-        .admin-panel-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--admin-blue);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .admin-panel-btn:hover {
-            transform: scale(1.1);
-            background: #0f2a5a;
-        }
-        
-        .admin-panel {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 380px;
-            height: 100vh;
-            background: var(--admin-light);
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-            z-index: 1001;
-            transition: all 0.4s ease;
-            overflow-y: auto;
-            padding: 20px;
-        }
-        
-        .admin-panel.active {
-            right: 0;
-        }
-        
-        .admin-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 20px;
-        }
-        
-        .admin-header h2 {
-            color: var(--admin-blue);
-            font-size: 1.5rem;
-        }
-        
-        .close-admin {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #777;
-        }
-        
-        .admin-section {
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        .admin-section h3 {
-            margin-bottom: 15px;
-            color: var(--admin-blue);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .admin-section h3 i {
-            color: var(--gold);
-        }
-        
-        .admin-login {
-            display: none;
-        }
-        
-        .admin-login.active {
-            display: block;
-        }
-        
-        .admin-form-group {
-            margin-bottom: 15px;
-        }
-        
-        .admin-form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: #444;
-        }
-        
-        .admin-form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        
-        .admin-login-btn {
-            background: var(--admin-blue);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            width: 100%;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: background 0.3s;
-        }
-        
-        .admin-login-btn:hover {
-            background: #0f2a5a;
-        }
-        
-        .admin-content {
-            display: none;
-        }
-        
-        .admin-content.active {
-            display: block;
-        }
-        
-        .submission-item {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-        
-        .submission-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .submission-name {
-            font-weight: bold;
-            color: var(--admin-blue);
-        }
-        
-        .submission-date {
-            font-size: 0.85rem;
-            color: #777;
-        }
-        
-        .submission-details p {
-            margin: 5px 0;
-            font-size: 0.9rem;
-        }
-        
-        .admin-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .admin-btn {
-            padding: 8px 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .view-btn {
-            background: var(--gold);
-            color: white;
-        }
-        
-        .delete-btn {
-            background: #e74c3c;
-            color: white;
-        }
-        
-        .whatsapp-btn {
-            background: #25D366;
-            color: white;
-        }
-        
-        .telegram-btn {
-            background: #0088cc;
-            color: white;
-        }
-        
-        .formspree-btn {
-            background: #6c5ce7;
-            color: white;
-        }
-        
-        .admin-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            display: none;
-        }
-        
-        .admin-overlay.active {
-            display: block;
-        }
-        
-        .modal-content {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            width: 90%;
-            max-width: 500px;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1002;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .modal-header h3 {
-            color: var(--admin-blue);
-        }
-        
-        .close-modal {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #777;
-        }
-        
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
@@ -740,11 +585,6 @@
                 left: 50%;
                 transform: translateX(-50%);
             }
-            
-            .admin-panel {
-                width: 100%;
-                right: -100%;
-            }
         }
         
         /* Animations */
@@ -768,54 +608,58 @@
         }
     </style>
     <style>
-/* SOSYAL MEDYA BUTON STİLLERİ */
-.social-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 12px 20px;
-  margin: 10px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.social-btn img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-/* WHATSAPP STİLİ */
-.whatsapp {
-  background: #25D366;
-  color: white;
-}
-
-/* TELEGRAM STİLİ */
-.telegram {
-  background: #0088cc;
-  color: white;
-}
-
-/* TIKTOK STİLİ */
-.tiktok {
-  background: #000000;
-  color: white;
-}
-
-/* HOVER EFEKTLERİ */
-.social-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-.social-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-</style>
+        /* SOSYAL MEDYA BUTON STİLLERİ */
+        .social-btn {
+          display: inline-flex;
+          align-items: center;
+          padding: 12px 20px;
+          margin: 10px;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .social-btn img {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+        }
+        
+        /* WHATSAPP STİLİ */
+        .whatsapp {
+          background: #25D366;
+          color: white;
+        }
+        
+        /* TELEGRAM STİLİ */
+        .telegram {
+          background: #0088cc;
+          color: white;
+        }
+        
+        /* TIKTOK STİLİ */
+        .tiktok {
+          background: #000000;
+          color: white;
+        }
+        
+        /* HOVER EFEKTLERİ */
+        .social-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .social-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+    </style>
+    <script
+  src='https://cdn.jotfor.ms/agent/embedjs/0198090d7bee79f7be48150206908c9a5936/embed.js?skipWelcome=1&maximizable=1'>
+</script>
 </head>
 <body>
     <div class="container">
@@ -839,26 +683,6 @@
                     </ul>
                 </nav>
             </div>
-             <!-- WHATSAPP BUTONU -->
-<a href="https://wa.me/905315003285" class="social-btn whatsapp" target="_blank">
-  <img src="whatsapp-icon.png" alt="WhatsApp">
-  WhatsApp
-</a>
-<!-- TELEGRAM BUTONU -->
-<a href="https://t.me/Aykut4181" class="social-btn telegram" target="_blank">
-  <img src="telegram-icon.png" alt="Telegram">
-  Telegram
-</a>
-<!-- TIKTOK BUTONLARI -->
-<a href="https://www.tiktok.com/@goldmetal81" class="social-btn tiktok" target="_blank">
-  <img src="tiktok-icon.png" alt="TikTok">
-  TikTok (Ana Hesap)
-</a>
-
-<a href="https://www.tiktok.com/@goldmetal41" class="social-btn tiktok" target="_blank">
-  <img src="tiktok-icon.png" alt="TikTok">
-  TikTok (Yedek Hesap)
-</a>
         </header>
         
         <main>
@@ -902,46 +726,77 @@
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/movwoogd" method="POST">
-                        <div class="form-group">
-                            <label for="name">Adınız Soyadınız *</label>
-                            <input type="text" id="name" name="name" required placeholder="Adınız ve soyadınız">
+                <div class="direct-contact">
+                    <h3>Doğrudan İletişim</h3>
+                    <p>Bize aşağıdaki yöntemlerden dilediğiniz zaman ulaşabilir, sorularınızı iletebilirsiniz.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h4>WhatsApp</h4>
+                            <div class="contact-info">Mesajlarınız anında bize ulaşır</div>
+                            <a href="https://wa.me/905315003285" class="contact-btn" target="_blank">Mesaj Gönder</a>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">E-posta Adresiniz *</label>
-                            <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <h4>Telegram</h4>
+                            <div class="contact-info">Hızlı ve güvenli iletişim</div>
+                            <a href="https://t.me/Aykut4181" class="contact-btn" target="_blank">Telegram'da Yaz</a>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="phone">Telefon Numaranız</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(531) 500 3285">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <h4>Telefon</h4>
+                            <div class="contact-info">Doğrudan görüşme için</div>
+                            <a href="tel:+905315003285" class="contact-btn">Hemen Ara</a>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="subject">Konu *</label>
-                            <select id="subject" name="subject" required>
-                                <option value="" disabled selected>Konu seçiniz</option>
-                                <option value="siparis">Sipariş Sorgulama</option>
-                                <option value="urun">Ürün Bilgisi</option>
-                                <option value="teknik">Teknik Destek</option>
-                                <option value="diger">Diğer</option>
-                            </select>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </div>
+                            <h4>TikTok</h4>
+                            <div class="contact-info">Ürün videoları ve tanıtımlar</div>
+                            <a href="https://www.tiktok.com/@goldmetal81" class="contact-btn" target="_blank">Sayfamızı İncele</a>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mesajınız *</label>
-                            <textarea id="message" name="message" required placeholder="Mesajınızı buraya yazın..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn pulse">Mesajı Gönder</button>
-                    </form>
+                    </div>
                 </div>
             </div>
             
             <div class="map-container fade-in">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48200.50511629776!2d29.395686!3d40.997222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac9f44c5c5c7d%3A0x5a15d0b2d4b7c9d0!2sGebze%2C%20Kocaeli!5e0!3m2!1str!2str!4v1651503742992!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="faq-section fade-in">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> En hızlı nasıl iletişim kurabilirim?</h3>
+                        <p>WhatsApp üzerinden bize 7/24 mesaj gönderebilirsiniz. Mesajlarınız en kısa sürede yanıtlanacaktır.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Ürünleriniz hakkında video izleyebilir miyim?</h3>
+                        <p>Evet, TikTok sayfalarımızda ürünlerimizin detaylı tanıtım videoları ve kullanım örnekleri bulunmaktadır.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Teknik destek için nasıl ulaşabilirim?</h3>
+                        <p>Telefon veya WhatsApp üzerinden teknik destek ekibimize ulaşabilirsiniz. Ayrıca Telegram üzerinden de destek alabilirsiniz.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Fiziksel mağazanız var mı?</h3>
+                        <p>Şu an için yalnızca online satış ve destek hizmeti sunmaktayız. Ürünlerimizi web sitemiz üzerinden inceleyebilirsiniz.</p>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -959,7 +814,6 @@
                     <li><a href="index.html"><i class="fas fa-home"></i> Anasayfa</a></li>
                     <li><a href="sulice-box.html"><i class="fas fa-shopping-cart"></i> Ürünler</a></li>
                     <li><a href="iletisim.html"><i class="fas fa-envelope"></i> İletişim</a></li>
-                    <li><a href="#"><i class="fas fa-question-circle"></i> Sıkça Sorulan Sorular</a></li>
                 </ul>
             </div>
             
@@ -978,283 +832,8 @@
             <p>Altın arama hobisi, yerel yönetmeliklere uygun olarak yapılmalıdır.</p>
         </div>
     </footer>
-
-    <!-- Admin Panel Button -->
-    <button class="admin-panel-btn">
-        <i class="fas fa-lock"></i>
-    </button>
-
-    <!-- Admin Panel -->
-    <div class="admin-panel">
-        <div class="admin-header">
-            <h2>Yönetici Paneli</h2>
-            <button class="close-admin"><i class="fas fa-times"></i></button>
-        </div>
-
-        <!-- Admin Login Section -->
-        <div class="admin-login active">
-            <div class="admin-section">
-                <h3><i class="fas fa-sign-in-alt"></i> Yönetici Girişi</h3>
-                <div class="admin-form-group">
-                    <label for="admin-username">Kullanıcı Adı</label>
-                    <input type="text" id="admin-username" placeholder="Kullanıcı adınız">
-                </div>
-                <div class="admin-form-group">
-                    <label for="admin-password">Şifre</label>
-                    <input type="password" id="admin-password" placeholder="Şifreniz">
-                </div>
-                <button class="admin-login-btn">Giriş Yap</button>
-            </div>
-        </div>
-
-        <!-- Admin Content Section (Visible after login) -->
-        <div class="admin-content">
-            <div class="admin-section">
-                <h3><i class="fas fa-tachometer-alt"></i> Kontrol Paneli</h3>
-                <div class="admin-stats">
-                    <p>Hoş geldiniz, <strong>GOLDMETAL</strong></p>
-                    <p>Son giriş: <span id="last-login">Bugün, 14:30</span></p>
-                </div>
-            </div>
-
-            <div class="admin-section">
-                <h3><i class="fas fa-envelope"></i> Gelen Mesajlar</h3>
-                <div id="submissions-list">
-                    <!-- Form submissions will be listed here -->
-                    <div class="submission-item">
-                        <div class="submission-header">
-                            <div class="submission-name">Ahmet Yılmaz</div>
-                            <div class="submission-date">10.07.2025</div>
-                        </div>
-                        <div class="submission-details">
-                            <p><strong>Konu:</strong> Ürün Bilgisi</p>
-                            <p><strong>Telefon:</strong> (531) 555 1234</p>
-                            <p><strong>Mesaj:</strong> Goldmonster modeli hakkında bilgi almak istiyorum.</p>
-                        </div>
-                        <div class="admin-actions">
-                            <button class="admin-btn whatsapp-btn">
-                                <i class="fab fa-whatsapp"></i> WhatsApp
-                            </button>
-                            <button class="admin-btn telegram-btn">
-                                <i class="fab fa-telegram"></i> Telegram
-                            </button>
-                            <button class="admin-btn formspree-btn">
-                                <i class="fas fa-reply"></i> Formspree
-                            </button>
-                            <button class="admin-btn delete-btn">
-                                <i class="fas fa-trash"></i> Sil
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="submission-item">
-                        <div class="submission-header">
-                            <div class="submission-name">Mehmet Kaya</div>
-                            <div class="submission-date">09.07.2025</div>
-                        </div>
-                        <div class="submission-details">
-                            <p><strong>Konu:</strong> Teknik Destek</p>
-                            <p><strong>Telefon:</strong> (532) 444 5678</p>
-                            <p><strong>Mesaj:</strong> Cihazımda teknik sorun var, yardımcı olabilir misiniz?</p>
-                        </div>
-                        <div class="admin-actions">
-                            <button class="admin-btn whatsapp-btn">
-                                <i class="fab fa-whatsapp"></i> WhatsApp
-                            </button>
-                            <button class="admin-btn telegram-btn">
-                                <i class="fab fa-telegram"></i> Telegram
-                            </button>
-                            <button class="admin-btn formspree-btn">
-                                <i class="fas fa-reply"></i> Formspree
-                            </button>
-                            <button class="admin-btn delete-btn">
-                                <i class="fas fa-trash"></i> Sil
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="admin-section">
-                <h3><i class="fas fa-cog"></i> Site Ayarları</h3>
-                <button class="admin-btn" style="background: var(--gold); width: 100%; margin-bottom: 10px;">
-                    <i class="fas fa-edit"></i> İletişim Bilgilerini Düzenle
-                </button>
-                <button class="admin-btn" style="background: var(--gold); width: 100%;">
-                    <i class="fas fa-business-time"></i> Çalışma Saatlerini Düzenle
-                </button>
-            </div>
-        </div>
-    </div>
     
     <script>
-        // Admin Panel Functions
-        const adminPanelBtn = document.querySelector('.admin-panel-btn');
-        const adminPanel = document.querySelector('.admin-panel');
-        const closeAdmin = document.querySelector('.close-admin');
-        const adminLogin = document.querySelector('.admin-login');
-        const adminContent = document.querySelector('.admin-content');
-        const adminLoginBtn = document.querySelector('.admin-login-btn');
-        const adminOverlay = document.querySelector('.admin-overlay');
-
-        // Toggle admin panel
-        adminPanelBtn.addEventListener('click', () => {
-            adminPanel.classList.toggle('active');
-            adminOverlay.classList.toggle('active');
-        });
-
-        // Close admin panel
-        closeAdmin.addEventListener('click', () => {
-            adminPanel.classList.remove('active');
-            adminOverlay.classList.remove('active');
-        });
-
-        // Admin login functionality
-        adminLoginBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('admin-username').value;
-            const password = document.getElementById('admin-password').value;
-            
-            if (username === 'GOLDMETAL' && password === 'Aykut4181') {
-                adminLogin.classList.remove('active');
-                adminContent.classList.add('active');
-                // Update last login time
-                const now = new Date();
-                document.getElementById('last-login').textContent = 
-                    `${now.toLocaleDateString('tr-TR')}, ${now.toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'})}`;
-            } else {
-                alert('Hatalı kullanıcı adı veya şifre!');
-            }
-        });
-
-        // Form submission handling
-        document.getElementById('contactForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const form = e.target;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.innerHTML;
-            
-            // Gönderim animasyonu
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
-            submitBtn.disabled = true;
-            
-            try {
-                const formData = new FormData(form);
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Başarılı gönderim
-                    alert('Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.');
-                    form.reset();
-                    
-                    // Simulate adding to admin panel
-                    const name = document.getElementById('name').value;
-                    const subject = document.getElementById('subject').value;
-                    const phone = document.getElementById('phone').value || 'Belirtilmemiş';
-                    const message = document.getElementById('message').value;
-                    
-                    if (name) {
-                        const now = new Date();
-                        const submissionList = document.getElementById('submissions-list');
-                        
-                        const submissionItem = document.createElement('div');
-                        submissionItem.className = 'submission-item';
-                        submissionItem.innerHTML = `
-                            <div class="submission-header">
-                                <div class="submission-name">${name}</div>
-                                <div class="submission-date">${now.toLocaleDateString('tr-TR')}</div>
-                            </div>
-                            <div class="submission-details">
-                                <p><strong>Konu:</strong> ${document.querySelector(`#subject option[value="${subject}"]`).textContent}</p>
-                                <p><strong>Telefon:</strong> ${phone}</p>
-                                <p><strong>Mesaj:</strong> ${message.substring(0, 50)}${message.length > 50 ? '...' : ''}</p>
-                            </div>
-                            <div class="admin-actions">
-                                <button class="admin-btn whatsapp-btn">
-                                    <i class="fab fa-whatsapp"></i> WhatsApp
-                                </button>
-                                <button class="admin-btn telegram-btn">
-                                    <i class="fab fa-telegram"></i> Telegram
-                                </button>
-                                <button class="admin-btn formspree-btn">
-                                    <i class="fas fa-reply"></i> Formspree
-                                </button>
-                                <button class="admin-btn delete-btn">
-                                    <i class="fas fa-trash"></i> Sil
-                                </button>
-                            </div>
-                        `;
-                        
-                        submissionList.prepend(submissionItem);
-                        
-                        // Add event listeners to new buttons
-                        submissionItem.querySelector('.whatsapp-btn').addEventListener('click', () => {
-                            window.open('https://wa.me/905315003285?text=Merhaba,%20sitenizdeki%20goldmonster%20hakkında%20bilgi%20almak%20istiyorum.', '_blank');
-                        });
-                        
-                        submissionItem.querySelector('.telegram-btn').addEventListener('click', () => {
-                            window.open('https://t.me/Aykut4181', '_blank');
-                        });
-                        
-                        submissionItem.querySelector('.formspree-btn').addEventListener('click', () => {
-                            window.open('https://formspree.io/accounts/login/?next=/f/movwoogd', '_blank');
-                        });
-                        
-                        submissionItem.querySelector('.delete-btn').addEventListener('click', () => {
-                            if (confirm('Bu mesajı silmek istediğinize emin misiniz?')) {
-                                submissionItem.remove();
-                            }
-                        });
-                    }
-                } else {
-                    // Hata durumu
-                    alert('Bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyin.');
-                }
-            } catch (error) {
-                // Ağ hatası
-                console.error('Error:', error);
-                alert('Bağlantı hatası oluştu. Lütfen internet bağlantınızı kontrol edin.');
-            } finally {
-                // Butonu eski haline getir
-                submitBtn.innerHTML = originalBtnText;
-                submitBtn.disabled = false;
-            }
-        });
-        
-        // Add event listeners to existing buttons
-        document.querySelectorAll('.whatsapp-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                window.open('https://wa.me/905315003285?text=Merhaba,%20sitenizdeki%20goldmonster%20hakkında%20bilgi%20almak%20istiyorum.', '_blank');
-            });
-        });
-        
-        document.querySelectorAll('.telegram-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                window.open('https://t.me/Aykut4181', '_blank');
-            });
-        });
-        
-        document.querySelectorAll('.formspree-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                window.open('https://formspree.io/accounts/login/?next=/f/movwoogd', '_blank');
-            });
-        });
-        
-        document.querySelectorAll('.delete-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                if (confirm('Bu mesajı silmek istediğinize emin misiniz?')) {
-                    this.closest('.submission-item').remove();
-                }
-            });
-        });
-
         // Animasyonları tetiklemek
         document.addEventListener('DOMContentLoaded', function() {
             const fadeElements = document.querySelectorAll('.fade-in');
