@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GOLD METAL - Dere Altın Eleme Savak Sistemleri. Profesyonel altın arama ekipmanları ve hobi bilgileri.">
-    <meta name="keywords" content="altın, eleme, savak, sistemleri, madencilik, GOLD METAL, altın arama, hobi madenciliği, altın eleme, savak sistemi, altın arama ekipmanları, altın arama hobisi, altın arama teknikleri, doğa aktiviteleri, altın arama seti, altın arama tüyoları, altın arama rehberi, savak sistemi nedir, altın arama nasıl yapılır, altın arama ekipmanları, motolu savak sistemi, gold monster, yatırma savak, yatırma savak sistemi, altın arama seti, altın arama tüyoları, altın arama rehberi, savak sistemi nedir, altın arama nasıl yapılır">
+    <meta name="keywords" content="altın, eleme, savak, sistemleri, madencilik, GOLD METAL, altın arama, hobi madenciliği, altın eleme, savak sistemi, altın arama ekipmanları, altın arama hobisi, altın arama teknikleri, doğa aktiviteleri, altın arama seti, altın arama tüyoları, altın arama rehberi, savak sistemi nedir, altın arama nasıl yapılır">
     <meta name="author" content="GOLD METAL">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.goldmetal.com/">
+    <meta property="og:title" content="GOLD METAL | Dere Altın Eleme Savak Sistemleri">
+    <meta property="og:description" content="Profesyonel altın eleme savak sistemleri ve hobi madenciliği ekipmanları">
+    <meta property="og:image" content="https://64.media.tumblr.com/c8a2f0b83b63adef6f4bd0ba29de5180/30b24c22617e32d9-04/s1280x1920/5d1e541cc557a65e52c96910aba89ae3f5ba2a84.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.goldmetal.com/">
+    <meta property="twitter:title" content="GOLD METAL | Dere Altın Eleme Savak Sistemleri">
+    <meta property="twitter:description" content="Profesyonel altın eleme savak sistemleri ve hobi madenciliği ekipmanları">
+    <meta property="twitter:image" content="https://64.media.tumblr.com/c8a2f0b83b63adef6f4bd0ba29de5180/30b24c22617e32d9-04/s1280x1920/5d1e541cc557a65e52c96910aba89ae3f5ba2a84.jpg">
+    
     <title>GOLD METAL | Dere Altın Eleme Savak Sistemleri</title>
     <link rel="icon" href="https://64.media.tumblr.com/c8a2f0b83b63adef6f4bd0ba29de5180/30b24c22617e32d9-04/s1280x1920/5d1e541cc557a65e52c96910aba89ae3f5ba2a84.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         :root {
             --gold: #D4AF37;
             --dark-gold: #B8860B;
@@ -29,6 +36,14 @@
             --danger: #F44336;
             --info: #2196F3;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
@@ -47,12 +62,14 @@
             padding: 0 20px;
         }
         
-        /* Header Styles */
+        /* Header Styles - Modernized */
         header {
             background: linear-gradient(135deg, var(--dark), #2c3e11);
-            padding: 20px 0;
+            padding: 15px 0;
             box-shadow: var(--shadow);
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
         .header-content {
@@ -77,6 +94,12 @@
             background: #000;
             overflow: hidden;
             padding: 5px;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: rotate(5deg);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
         }
         
         .logo img {
@@ -97,7 +120,7 @@
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
         
-        /* Navigation */
+        /* Navigation - Improved */
         nav {
             background: linear-gradient(to right, #2c3e11, var(--dark));
             border-radius: 8px;
@@ -124,7 +147,7 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             position: relative;
             border-radius: 8px;
         }
@@ -134,26 +157,33 @@
             background: rgba(212, 175, 55, 0.2);
         }
         
-        /* Hero Section */
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+        
+        nav ul li a:hover::after {
+            width: 70%;
+        }
+        
+        /* Hero Section - Enhanced */
         .hero {
-            padding: 80px 0;
+            padding: 120px 0;
             text-align: center;
-            background: url('https://images.unsplash.com/photo-1528973085171-9c9e0b0e3c9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1528973085171-9c9e0b0e3c9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             color: white;
             position: relative;
             margin-bottom: 40px;
             border-radius: 15px;
             overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            animation: fadeIn 1.5s ease;
         }
         
         .hero-content {
@@ -164,37 +194,57 @@
         }
         
         .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
             color: var(--light-gold);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+            animation: slideIn 1s ease;
         }
         
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-size: 1.3rem;
+            margin-bottom: 40px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            animation: slideIn 1.2s ease;
         }
         
         .cta-button {
             display: inline-block;
             background: var(--gold);
             color: white;
-            padding: 15px 35px;
+            padding: 16px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1.5s ease;
         }
         
         .cta-button:hover {
             background: var(--dark-gold);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .cta-button:hover::after {
+            left: 100%;
         }
         
         /* Main Content */
@@ -204,14 +254,14 @@
         
         .section-title {
             text-align: center;
-            margin: 40px 0;
+            margin: 60px 0 40px;
             position: relative;
         }
         
         .section-title h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--dark);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             position: relative;
             display: inline-block;
         }
@@ -219,10 +269,10 @@
         .section-title h2::after {
             content: "";
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
+            width: 120px;
             height: 4px;
             background: linear-gradient(to right, var(--gold), var(--dark-gold));
             border-radius: 2px;
@@ -241,12 +291,31 @@
             padding: 30px;
             box-shadow: var(--shadow);
             border-top: 4px solid var(--gold);
-            transition: transform 0.3s ease;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
         
         .content-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--gold);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.5s;
+        }
+        
+        .content-card:hover::before {
+            transform: scaleY(1);
         }
         
         .content-card h3 {
@@ -262,14 +331,19 @@
             margin-bottom: 20px;
             color: #555;
             font-size: 1.1rem;
+            line-height: 1.7;
         }
         
-        /* Device Info */
+        /* Device Info - Modernized */
         .device-info {
             display: flex;
             gap: 40px;
-            margin: 50px 0;
+            margin: 60px 0;
             flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
         }
         
         .device-image {
@@ -278,12 +352,22 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .device-image:hover {
+            transform: scale(1.02);
         }
         
         .device-image img {
             width: 100%;
             height: auto;
             display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .device-image:hover img {
+            transform: scale(1.05);
         }
         
         .device-specs {
@@ -317,12 +401,17 @@
             background: #f9f9f9;
         }
         
+        .specs-table tr:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        
         /* Hobby Section */
         .hobby-section {
             background: rgba(212, 175, 55, 0.05);
             padding: 40px;
             border-radius: 15px;
-            margin: 50px 0;
+            margin: 60px 0;
+            box-shadow: var(--shadow);
         }
         
         .hobby-grid {
@@ -333,25 +422,33 @@
         
         .hobby-card {
             background: white;
-            padding: 25px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: var(--shadow);
             text-align: center;
-            transition: all 0.3s ease;
+            transition: var(--transition);
+            border: 2px solid transparent;
         }
         
         .hobby-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--gold);
         }
         
         .hobby-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--gold);
             margin-bottom: 20px;
+            transition: var(--transition);
         }
         
-        /* Gallery */
+        .hobby-card:hover .hobby-icon {
+            transform: scale(1.1);
+            color: var(--dark-gold);
+        }
+        
+        /* Gallery - Improved */
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -364,17 +461,24 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             position: relative;
+            height: 250px;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         
         .gallery-item img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.5s ease;
         }
         
         .gallery-item:hover img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
         
         .gallery-caption {
@@ -384,22 +488,33 @@
             right: 0;
             background: rgba(0, 0, 0, 0.7);
             color: white;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
         }
         
-        /* FAQ */
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        /* FAQ - Enhanced */
         .faq-section {
-            margin: 50px 0;
+            margin: 60px 0;
         }
         
         .faq-item {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             background: white;
             border-radius: 10px;
             box-shadow: var(--shadow);
             overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
         
         .faq-question {
@@ -411,25 +526,82 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background: var(--dark-gold);
         }
         
         .faq-answer {
-            padding: 20px;
-            display: none;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
         }
         
         .faq-answer.active {
-            display: block;
+            padding: 20px;
+            max-height: 500px;
         }
         
-        /* Footer */
+        /* Social Buttons - Modernized */
+        .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            font-size: 1rem;
+            min-width: 200px;
+            justify-content: center;
+        }
+        
+        .social-btn i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .telegram {
+            background: #0088cc;
+            color: white;
+        }
+        
+        .tiktok {
+            background: #000000;
+            color: white;
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Footer - Enhanced */
         footer {
             background: linear-gradient(to right, var(--dark), #2c3e11);
-            padding: 40px 0 20px;
+            padding: 60px 0 30px;
             color: white;
             position: relative;
-            margin-top: 50px;
+            margin-top: 80px;
             border-top: 3px solid var(--gold);
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
         }
         
         .footer-content {
@@ -445,13 +617,15 @@
             flex: 1;
             min-width: 300px;
             margin-bottom: 30px;
+            padding-right: 20px;
         }
         
         .footer-section h3 {
             color: var(--light-gold);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
+            font-size: 1.5rem;
         }
         
         .footer-section h3::after {
@@ -465,46 +639,74 @@
         }
         
         .contact-info-footer p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
         
         .social-links {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
         .social-link {
             display: inline-block;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            transition: all 0.3s ease;
+            transition: var(--transition);
+            font-size: 1.2rem;
         }
         
         .social-link:hover {
             background: var(--gold);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
         
         .copyright {
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             color: #aaa;
             margin-top: 20px;
             text-align: center;
+            max-width: 1200px;
+            margin: 30px auto 0;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         
         /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.3rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+        
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -525,51 +727,63 @@
                 flex-direction: column;
             }
             
+            .hero {
+                padding: 80px 0;
+            }
+            
             .hero h2 {
                 font-size: 2rem;
             }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .footer-section h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
         }
-        /* SOSYAL MEDYA BUTON STİLLERİ */
-.social-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 12px 20px;
-  margin: 10px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.social-btn img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-/* WHATSAPP STİLİ */
-.whatsapp {
-  background: #25D366;
-  color: white;
-}
-
-/* TELEGRAM STİLİ */
-.telegram {
-  background: #0088cc;
-  color: white;
-}
-
-/* TIKTOK STİLİ */
-.tiktok {
-  background: #000000;
-  color: white;
-</style>
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="918b405e-a8a8-499c-9695-94195b3c939b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); 
-</script>
+        
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .content-card, .hobby-card {
+                padding: 20px;
+            }
+            
+            .social-btn {
+                min-width: 100%;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="918b405e-a8a8-499c-9695-94195b3c939b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); 
+    </script>
 </head>
 <body>
     <div class="container">
@@ -584,32 +798,12 @@
                         <p>Dere Altın Eleme Sistemleri</p>
                     </div>
                 </div>
-                   <!-- WHATSAPP BUTONU -->
-<a href="https://wa.me/905315003285" class="social-btn whatsapp" target="_blank">
-  <img src="whatsapp-icon.png" alt="WhatsApp">
-  WhatsApp
-</a>
-<!-- TELEGRAM BUTONU -->
-<a href="https://t.me/Aykut4181" class="social-btn telegram" target="_blank">
-  <img src="telegram-icon.png" alt="Telegram">
-  Telegram
-</a>
-<!-- TIKTOK BUTONLARI -->
-<a href="https://www.tiktok.com/@goldmetal81" class="social-btn tiktok" target="_blank">
-  <img src="tiktok-icon.png" alt="TikTok">
-  TikTok (Ana Hesap)
-</a>
-
-<a href="https://www.tiktok.com/@goldmetal41" class="social-btn tiktok" target="_blank">
-  <img src="tiktok-icon.png" alt="TikTok">
-  TikTok (Yedek Hesap)
-</a>
                 
                 <nav>
                     <ul>
                         <li><a href="gold-metal.html"><i class="fas fa-shopping-cart"></i> Ürün</a></li>
                         <li><a href="#hobi"><i class="fas fa-gem"></i> Hobi Bilgileri</a></li>
-                        <li><a href="iletisim.html"><i class="fas fa-gem"></i>İletişim</a></li>
+                        <li><a href="#iletisim"><i class="fas fa-envelope"></i> İletişim</a></li>
                     </ul>
                 </nav>
             </div>
@@ -622,6 +816,22 @@
                 <a href="#urun" class="cta-button">Ürünü İncele <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
+        
+        <!-- Social Media Buttons - Modern Placement -->
+        <div class="social-buttons">
+            <a href="https://wa.me/905315003285" class="social-btn whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://t.me/Aykut4181" class="social-btn telegram" target="_blank">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+            <a href="https://www.tiktok.com/@goldmetal81" class="social-btn tiktok" target="_blank">
+                <i class="fab fa-tiktok"></i> TikTok (Ana Hesap)
+            </a>
+            <a href="https://www.tiktok.com/@goldmetal41" class="social-btn tiktok" target="_blank">
+                <i class="fab fa-tiktok"></i> TikTok (Yedek Hesap)
+            </a>
+        </div>
         
         <main>
             <section id="urun">
@@ -826,13 +1036,14 @@
                         <p><i class="fas fa-map-marker-alt"></i> Gebze, Kocaeli, Türkiye</p>
                         <p><i class="fas fa-phone"></i> +90 531 500 3285</p>
                         <p><i class="fas fa-envelope"></i> info@goldmetal.com</p>
+                        <p><i class="fas fa-clock"></i> 09:00 - 18:00 (Pazartesi - Cumartesi)</p>
                     </div>
                     
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/905315003285" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/goldmetal_41?igsh=ZW1mYjA3OGNtZ3hk" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/gold.metal41" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/@goldmetal41" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
@@ -841,12 +1052,17 @@
                     <p><a href="index.html" style="color: #ddd; text-decoration: none;">Anasayfa</a></p>
                     <p><a href="gold-metal.html" style="color: #ddd; text-decoration: none;">Ürün Özellikleri</a></p>
                     <p><a href="#hobi" style="color: #ddd; text-decoration: none;">Hobi Bilgileri</a></p>
-                    <p><a href="iletisim.html" style="color: #ddd; text-decoration: none;">İletişim</a></p>
+                    <p><a href="#iletisim" style="color: #ddd; text-decoration: none;">İletişim</a></p>
+                    <p><a href="#" style="color: #ddd; text-decoration: none;">SSS</a></p>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Hakkımızda</h3>
                     <p>GOLD METAL, doğa severler ve hobi madencileri için yüksek kaliteli altın eleme ekipmanları üretir. Ürünlerimiz hafif, dayanıklı ve çevre dostu malzemelerden üretilmiştir.</p>
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                        <h4><i class="fas fa-award"></i> Kalite Garantisi</h4>
+                        <p>Tüm ürünlerimiz titiz kalite kontrol süreçlerinden geçmektedir.</p>
+                    </div>
                 </div>
             </div>
             
@@ -886,6 +1102,30 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+        
+        // Add active class to navigation links when scrolled to section
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul li a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
