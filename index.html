@@ -697,7 +697,82 @@
             to { transform: translateY(0); opacity: 1; }
         }
         
-        /* Responsive Design */
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: var(--light-gold);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 42, 15, 0.95);
+            z-index: 2000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            text-align: center;
+        }
+        
+        .mobile-nav ul li {
+            margin: 20px 0;
+        }
+        
+        .mobile-nav ul li a {
+            color: var(--light-gold);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .mobile-nav ul li a:hover {
+            color: white;
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 8px;
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--light-gold);
+            cursor: pointer;
+        }
+        
+        /* Responsive Design - Enhanced for mobile */
         @media (max-width: 992px) {
             .hero h2 {
                 font-size: 2.3rem;
@@ -705,26 +780,36 @@
             .hero p {
                 font-size: 1.1rem;
             }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .content-card, .hobby-card {
+                padding: 25px;
+            }
+            
+            .social-btn {
+                min-width: 180px;
+            }
         }
         
         @media (max-width: 768px) {
             .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .logo-container {
-                justify-content: center;
-                margin-bottom: 20px;
-            }
-            
-            nav ul {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
             }
             
-            .device-info {
-                flex-direction: column;
+            .logo-container {
+                flex: 1;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: flex;
             }
             
             .hero {
@@ -736,13 +821,58 @@
             }
             
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+            
+            .section-title h2::after {
+                bottom: -10px;
+            }
+            
+            .device-info {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .specs-table th, .specs-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .hobby-section {
+                padding: 25px;
+            }
+            
+            .hobby-card {
+                padding: 20px;
+            }
+            
+            .hobby-icon {
+                font-size: 3rem;
+            }
+            
+            .social-buttons {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .social-btn {
+                width: 100%;
+            }
+            
+            .mobile-nav {
+                display: flex;
             }
             
             .footer-content {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+            }
+            
+            .footer-section {
+                padding-right: 0;
+                margin-bottom: 30px;
             }
             
             .footer-section h3::after {
@@ -753,11 +883,19 @@
             .social-links {
                 justify-content: center;
             }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
         }
         
         @media (max-width: 480px) {
+            .hero {
+                padding: 60px 15px;
+            }
+            
             .hero h2 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             
             .hero p {
@@ -769,16 +907,45 @@
                 font-size: 1rem;
             }
             
+            .section-title {
+                margin: 40px 0 30px;
+            }
+            
             .section-title h2 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             
             .content-card, .hobby-card {
                 padding: 20px;
             }
             
-            .social-btn {
-                min-width: 100%;
+            .hobby-icon {
+                font-size: 2.5rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item {
+                height: 200px;
+            }
+            
+            .brand-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .mobile-nav ul li a {
+                font-size: 1.3rem;
+            }
+            
+            .footer-section h3 {
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -798,22 +965,23 @@
                         <p>Dere Altın Eleme Sistemleri</p>
                     </div>
                 </div>
-                
-                <nav>
-                    <ul>
-                        <li><a href="gold-metal.html"><i class="fas fa-shopping-cart"></i> Ürün</a></li>
-                        <li><a href="#hobi"><i class="fas fa-gem"></i> Hobi Bilgileri</a></li>
-                        <li><a href="iletisim.html"><i class="fas fa-envelope"></i> İletişim</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
+        
+        <div class="mobile-nav" id="mobileNav">
+            <div class="close-menu" id="closeMenu">&times;</div>
+            <ul>
+                <li><a href="gold-metal.html"><i class="fas fa-shopping-cart"></i> Ürün</a></li>
+                <li><a href="iletisim.html"><i class="fas fa-envelope"></i> İletişim</a></li>
+            </ul>
+        </div>
         
         <section class="hero">
             <div class="hero-content">
                 <h2>Profesyonel Altın Eleme Savak Sistemi</h2>
                 <p>Dere yataklarında kırıntı altın arama hobisini bir üst seviyeye taşıyın. Hafif, dayanıklı ve yüksek verimli ekipmanlarımızla doğanın gizli hazinelerini keşfedin.</p>
-                <a href="#urun" class="cta-button">Ürünü İncele <i class="fas fa-arrow-right"></i></a>
+                <a href="gold-metal.html" class="cta-button">Ürünü İncele <i class="fas fa-arrow-right"></i></a>
+                <a href="iletisim.html" class="cta-button">İletişim Kur <i class="fas fa-envelope"></i></a>
             </div>
         </section>
         
@@ -1012,7 +1180,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Ekipmanlarınızı kullandıktan sonra temiz suyla yıkayın ve kurumasını bekleyin. Özellikle hareketli parçalarda kum birikmesini önlemek için düzenli temizlik önemlidir. Kesinlikle kimyasal temizleyici kullanmayın.</p>
+                        <p>Ekipmanlarınızı kullandıktan sonra temiz suyla yıkayın ve kurmasını bekleyin. Özellikle hareketli parçalarda kum birikmesini önlemek için düzenli temizlik önemlidir. Kesinlikle kimyasal temizleyici kullanmayın.</p>
                     </div>
                 </div>
                 
@@ -1127,6 +1295,37 @@
                     link.classList.add('active');
                 }
             });
+        });
+        
+        // Mobile Navigation
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const closeMenu = document.getElementById('closeMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Close mobile menu when clicking on a link
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        window.addEventListener('click', (e) => {
+            if (mobileNav.classList.contains('active') && e.target === mobileNav) {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     </script>
 </body>
